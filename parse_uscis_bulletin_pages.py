@@ -51,8 +51,8 @@ fig.set_size_inches(16, 10)
 ax.xaxis.set_major_locator(plt_locator)
 ax.xaxis.set_major_formatter(plt_formatter)
 plt.title(f"Waiting time (in months) for filing EB3; FY {FY} to current")
-ax.yaxis.set_label('Months')
-ax.xaxis.set_label('Visa Bulletin Date')
+ax.set_ylabel('Months')
+ax.set_xlabel('Visa Bulletin Date')
 
 ax.plot(sorted(file_dates.keys()), [(date - file_dates[date]).days // 30 for date in sorted(file_dates.keys())], label='EB3 waiting time')
 
